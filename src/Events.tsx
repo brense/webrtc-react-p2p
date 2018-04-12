@@ -41,28 +41,6 @@ const Events = {
             this.addToEventsList(evt.event, evt.data, evt.timestamp, evt.from);
         });
 
-        /*
-        this.on('iamnew').subscribe(evt => {
-            if (!this.isNew && !this.receivingEvents) {
-                this.send('iamready', {}, evt.from);
-            }
-        });
-
-        let receiveEventsSubscription = this.on('iamready').subscribe(evt => {
-            receiveEventsSubscription.unsubscribe();
-            this.receivingEvents = true;
-            this.send('events', {}, evt.from);
-        });
-
-        this.on('events').subscribe(evt => {
-            this.sendEventsTo(evt.from);
-        });
-
-        this.on('ready').subscribe(evt => {
-            this.receivingEvents = false;
-        });
-        */
-
         return true;
     },
     disconnect() {
